@@ -1,0 +1,140 @@
+﻿@page "/counter"
+@inject HttpClient Http
+@using Newtonsoft.Json
+@inject IJSRuntime JSRuntime
+@inject Blazored.LocalStorage.ILocalStorageService localStorage;
+
+<PageTitle>Counter</PageTitle>
+
+<h1>Counter</h1>
+
+<p role="status">Current count: @currentCount</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+<input type="text" @bind="query">
+<button @onclick="JsonOut">Get</button>
+<button @onclick="LogWeatherData">Log Weather Data</button>
+
+
+<p>
+    @data
+</p>
+<ul>
+    @if (weatherData != null && weatherData.Daily != null && weatherData.Daily.Temperature_2m_Max  != null)
+    {
+        @foreach (var item in weatherData.Daily.Temperature_2m_Max )
+        {
+            <li>@item</li>
+        }
+    }
+</ul>
+
+@if(rs!=null){
+    @foreach(var s in rs){
+        <div>@s</div>
+    }
+}
+
+@code {
+    public List<string> favourites = new List<string>(){}; 
+    private int currentCount = 0;
+    public string data;
+     public string dataS;
+    public string query="";
+    public List<string> rs;
+   
+
+    
+     
+    
+    WeatherData weatherData = null;
+    @* Weather listdata; *@
+   
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+
+    private HttpClient _client;
+    
+    public async Task JsonOut(){
+        
+        _client = new HttpClient();
+        
+       
+
+            
+            
+
+        HttpResponseMessage response = await _client.GetAsync("http://localhost:5091/api/weather?query="+query);
+        if(response.IsSuccessStatusCode){
+            data = await response.Content.ReadAsStringAsync();
+            weatherData = JsonConvert.DeserializeObject<WeatherData>(data);
+            
+            Console.WriteLine(weatherData);
+            
+            rs.Add(query);
+            dataS = JsonConvert.SerializeObject(rs);
+            await JSRuntime.InvokeVoidAsync("localStorage.setItem", "rs", dataS);
+            
+
+            
+            StateHasChanged();
+            
+    }
+
+   
+    
+}
+protected override async Task OnInitializedAsync()
+    {
+        
+        var exists = await JSRuntime.InvokeAsync<string>("localStorage.getItem", "rs") != null;
+
+       
+        if (!exists)
+        {
+            
+            string emptyArrayJson = "[]";
+            
+            
+            await JSRuntime.InvokeVoidAsync("localStorage.setItem", "rs", emptyArrayJson);
+        }
+        var temp = await JSRuntime.InvokeAsync<string>("localStorage.getItem", "rs");
+        rs = JsonConvert.DeserializeObject<List<string>>(temp);
+    }
+private async Task LogWeatherData()
+    {
+        await JSRuntime.InvokeVoidAsync("console.log", weatherData);
+        
+    }
+public class WeatherData
+{
+    public double Latitude { get; set; }
+    public double Longitude { get; set; }
+    public double GenerationTimeMs { get; set; }
+    public int UtcOffsetSeconds { get; set; }
+    public string TimeZone { get; set; }
+    public string TimeZoneAbbreviation { get; set; }
+    public double Elevation { get; set; }
+    public DailyUnits DailyUnits { get; set; }
+    public DailyData Daily { get; set; }
+}
+
+public class DailyUnits
+{
+    public string Time { get; set; }
+    public string Temperature2mMax { get; set; }
+    public string Temperature2mMin { get; set; }
+}
+
+public class DailyData
+{
+    public List<DateTime> Time { get; set; }
+    public List<double> Temperature_2m_Max { get; set; }
+    public List<double> Temperature_2m_Min { get; set; }
+}
+
+}
+
+

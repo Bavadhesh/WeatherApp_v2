@@ -1,0 +1,113 @@
+  <div class="weather-status-container">
+        <h4><b>Weather status of @place</b></h4>
+        
+    </div>
+ <div class="container">
+   
+   @for(int i = 0; i < date.Count - 1; i++)
+{
+    @if(i < 5)
+    {
+        <div class="card">
+            <div class="date">@($"{5 - i} days before")</div>
+            <div class="temperature">Max temp:<b>@temp_max[i]°C</b></div>
+            <div class="temperature">Min temp:<b>@temp_min[i]°C</b></div>
+        </div>
+    }
+    else if(i == 5)
+    {
+        <div class="card">
+            <div class="date">Today</div>
+            <div class="temperature">Max temp:<b>@temp_max[i]°C</b></div>
+            <div class="temperature">Min temp:<b>@temp_min[i]°C</b></div>
+        </div>
+    }
+    else
+    {
+        <div class="card">
+            <div class="date">@($"{i - 5} days after")</div>
+            <div class="temperature">Max temp:<b>@temp_max[i]°C</b></div>
+            <div class="temperature">Min temp:<b>@temp_min[i]°C</b></div>
+        </div>
+    }
+}
+        
+        
+        <!-- Add more cards as needed -->
+    </div>
+
+<style>
+    body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .card {
+            width: 200px;
+            height: 200px;
+            background-color: #fff;
+            border-radius: 15px;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .date {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .temperature {
+            font-size: 20px;
+            color: #007bff;
+        }
+        .weather-status-container {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .weather-status-container h4 {
+            color: #333333;
+            font-size: 20px;
+            margin: 0;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #cccccc;
+        }
+</style>
+@code{
+    
+    [Parameter]
+    public string place {get;set;}
+    [Parameter]
+    public List<DateTime> date {get;set;}
+    [Parameter]
+    public List<double> temp_min {get;set;}
+    [Parameter]
+    public List<double> temp_max {get;set;}
+
+     
+}
+ 

@@ -1,0 +1,199 @@
+@page "/weather"
+@inject HttpClient Http
+@using Newtonsoft.Json
+@inject IJSRuntime JSRuntime
+@inject Blazored.LocalStorage.ILocalStorageService localStorage;
+
+ <header class="header">
+        <h1 class="brand">Weather App</h1>
+    </header>
+    <div class="search-container">
+        <input type="text" class="search-input" placeholder="Enter location..." @bind="query">
+        <button class="search-button" @onclick="JsonOut">Search</button>
+    </div>
+   
+     @if (weatherData != null && weatherData.Daily != null && weatherData.Daily.Temperature_2m_Max  != null)
+    {
+       <TodayWeather min=@weatherData.Daily.Temperature_2m_Min[todayIndex] max=@weatherData.Daily.Temperature_2m_Max[todayIndex]></TodayWeather>
+      <List place=@query date=@weatherData.Daily.Time temp_min=@weatherData.Daily.Temperature_2m_Min temp_max=@weatherData.Daily.Temperature_2m_Max   />   
+    }
+    
+    
+
+    <style>
+        
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.brand {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.search-container {
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 20px auto;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.search-container:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.search-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}
+    </style>
+
+@code {
+    public List<string> favourites = new List<string>(){}; 
+    private int currentCount = 0;
+    public string data;
+    public string query="";
+    DateTime today = DateTime.Today;
+    public List<string> rs;
+    public string dataS;
+
+// Find the index of today's date in the list
+    public int todayIndex; 
+
+   
+
+    
+     
+    
+    WeatherData weatherData = null;
+    @* Weather listdata; *@
+   
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+
+    private HttpClient _client;
+    
+    public async Task JsonOut(){
+        
+        _client = new HttpClient();
+
+    
+        
+       
+
+            
+            
+
+        HttpResponseMessage response = await _client.GetAsync("http://localhost:5091/api/weather?query="+query);
+        if(response.IsSuccessStatusCode){
+            data = await response.Content.ReadAsStringAsync();
+            weatherData = JsonConvert.DeserializeObject<WeatherData>(data);
+            Console.WriteLine(weatherData);
+            todayIndex = weatherData.Daily.Time.FindIndex(date => date.Date == today);
+
+
+            rs.Add(query);
+            dataS = JsonConvert.SerializeObject(rs);
+            await JSRuntime.InvokeVoidAsync("localStorage.setItem", "rs", dataS);
+            
+            StateHasChanged();
+            
+    }
+
+   
+    
+}
+private async Task LogWeatherData()
+    {
+        await JSRuntime.InvokeVoidAsync("console.log", weatherData);
+        
+    }
+public class WeatherData
+{
+    public double Latitude { get; set; }
+    public double Longitude { get; set; }
+    public double GenerationTimeMs { get; set; }
+    public int UtcOffsetSeconds { get; set; }
+    public string TimeZone { get; set; }
+    public string TimeZoneAbbreviation { get; set; }
+    public double Elevation { get; set; }
+    public DailyUnits DailyUnits { get; set; }
+    public DailyData Daily { get; set; }
+}
+
+public class DailyUnits
+{
+    public string Time { get; set; }
+    public string Temperature2mMax { get; set; }
+    public string Temperature2mMin { get; set; }
+}
+
+public class DailyData
+{
+    public List<DateTime> Time { get; set; }
+    public List<double> Temperature_2m_Max { get; set; }
+    public List<double> Temperature_2m_Min { get; set; }
+}
+
+protected override async Task OnInitializedAsync()
+    {
+        
+        var exists = await JSRuntime.InvokeAsync<string>("localStorage.getItem", "rs") != null;
+
+       
+        if (!exists)
+        {
+            
+            string emptyArrayJson = "[]";
+            
+            
+            await JSRuntime.InvokeVoidAsync("localStorage.setItem", "rs", emptyArrayJson);
+        }else{
+        var temp = await JSRuntime.InvokeAsync<string>("localStorage.getItem", "rs");
+        rs = JsonConvert.DeserializeObject<List<string>>(temp);
+        query = rs[rs.Count-1];
+        JsonOut();
+        }
+    }
+
+}
+
+

@@ -1,0 +1,61 @@
+
+body[b-89eorl8udf] {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.header[b-89eorl8udf] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.brand[b-89eorl8udf] {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.search-container[b-89eorl8udf] {
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 20px auto;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.search-container:hover[b-89eorl8udf] {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.search-input[b-89eorl8udf] {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.search-button[b-89eorl8udf] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover[b-89eorl8udf] {
+    background-color: #0056b3;
+}

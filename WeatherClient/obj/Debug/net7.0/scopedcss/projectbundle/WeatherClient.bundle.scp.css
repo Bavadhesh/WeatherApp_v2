@@ -1,0 +1,213 @@
+/* /Pages/Weather.razor.rz.scp.css */
+
+body[b-89eorl8udf] {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.header[b-89eorl8udf] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.brand[b-89eorl8udf] {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.search-container[b-89eorl8udf] {
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 20px auto;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.search-container:hover[b-89eorl8udf] {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.search-input[b-89eorl8udf] {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.search-button[b-89eorl8udf] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover[b-89eorl8udf] {
+    background-color: #0056b3;
+}
+/* /Shared/MainLayout.razor.rz.scp.css */
+.page[b-yf2neqew1r] {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+main[b-yf2neqew1r] {
+    flex: 1;
+}
+
+.sidebar[b-yf2neqew1r] {
+    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+}
+
+.top-row[b-yf2neqew1r] {
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #d6d5d5;
+    justify-content: flex-end;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+}
+
+    .top-row[b-yf2neqew1r]  a, .top-row[b-yf2neqew1r]  .btn-link {
+        white-space: nowrap;
+        margin-left: 1.5rem;
+        text-decoration: none;
+    }
+
+    .top-row[b-yf2neqew1r]  a:hover, .top-row[b-yf2neqew1r]  .btn-link:hover {
+        text-decoration: underline;
+    }
+
+    .top-row[b-yf2neqew1r]  a:first-child {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+@media (max-width: 640.98px) {
+    .top-row:not(.auth)[b-yf2neqew1r] {
+        display: none;
+    }
+
+    .top-row.auth[b-yf2neqew1r] {
+        justify-content: space-between;
+    }
+
+    .top-row[b-yf2neqew1r]  a, .top-row[b-yf2neqew1r]  .btn-link {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 641px) {
+    .page[b-yf2neqew1r] {
+        flex-direction: row;
+    }
+
+    .sidebar[b-yf2neqew1r] {
+        width: 250px;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+
+    .top-row[b-yf2neqew1r] {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+    .top-row.auth[b-yf2neqew1r]  a:first-child {
+        flex: 1;
+        text-align: right;
+        width: 0;
+    }
+
+    .top-row[b-yf2neqew1r], article[b-yf2neqew1r] {
+        padding-left: 2rem !important;
+        padding-right: 1.5rem !important;
+    }
+}
+/* /Shared/NavMenu.razor.rz.scp.css */
+.navbar-toggler[b-mqmynt69cz] {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.top-row[b-mqmynt69cz] {
+    height: 3.5rem;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.navbar-brand[b-mqmynt69cz] {
+    font-size: 1.1rem;
+}
+
+.oi[b-mqmynt69cz] {
+    width: 2rem;
+    font-size: 1.1rem;
+    vertical-align: text-top;
+    top: -2px;
+}
+
+.nav-item[b-mqmynt69cz] {
+    font-size: 0.9rem;
+    padding-bottom: 0.5rem;
+}
+
+    .nav-item:first-of-type[b-mqmynt69cz] {
+        padding-top: 1rem;
+    }
+
+    .nav-item:last-of-type[b-mqmynt69cz] {
+        padding-bottom: 1rem;
+    }
+
+    .nav-item[b-mqmynt69cz]  a {
+        color: #d7d7d7;
+        border-radius: 4px;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        line-height: 3rem;
+    }
+
+.nav-item[b-mqmynt69cz]  a.active {
+    background-color: rgba(255,255,255,0.25);
+    color: white;
+}
+
+.nav-item[b-mqmynt69cz]  a:hover {
+    background-color: rgba(255,255,255,0.1);
+    color: white;
+}
+
+@media (min-width: 641px) {
+    .navbar-toggler[b-mqmynt69cz] {
+        display: none;
+    }
+
+    .collapse[b-mqmynt69cz] {
+        /* Never collapse the sidebar for wide screens */
+        display: block;
+    }
+    
+    .nav-scrollable[b-mqmynt69cz] {
+        /* Allow sidebar to scroll for tall menus */
+        height: calc(100vh - 3.5rem);
+        overflow-y: auto;
+    }
+}

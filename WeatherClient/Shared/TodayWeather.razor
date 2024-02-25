@@ -1,0 +1,71 @@
+<h6 class="weather-heading">Today's Weather Status</h6>
+<div class="weather-bar">
+    <div class="temperature">@Math.Round(Temperature)°C</div>
+    <div class="bar-container">
+        <div class="bar" style="width: @Width%;"></div>
+    </div>
+</div>
+
+<style>
+    /* Add these styles to your existing CSS file or create a new one */
+
+    .weather-heading {
+        font-size: 20px;
+        font-weight: bold;
+        color: #007bff; /* Set heading color to blue */
+        margin-bottom: 10px; /* Add space below the heading */
+        text-align: center; /* Center align the heading */
+        text-transform: uppercase; /* Convert text to uppercase */
+    }
+
+    .weather-bar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+        border: 2px solid #007bff; /* Add a border to the weather bar */
+        border-radius: 10px; /* Round the corners */
+        padding: 10px; /* Add some padding */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    }
+
+    .temperature {
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: #007bff; /* Set temperature text color */
+    }
+
+    .bar-container {
+        width: 300px; /* Adjust width as needed */
+        height: 20px; /* Adjust height as needed */
+        background-color: #f0f0f0;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .bar {
+        height: 100%;
+        background-color: #007bff; /* Adjust color as needed */
+        transition: width 0.5s ease;
+    }
+</style>
+
+@code {
+    [Parameter]
+    public double min { get; set; }
+    [Parameter]
+    public double max { get; set; }
+
+    public double Temperature;
+
+    protected override async Task OnInitializedAsync()
+    {
+        Temperature = (min + max) / 2;
+    }
+
+    // Adjust the range of temperatures to fit within the desired width range
+    private double Width => Math.Max(0, Math.Min(100, (Temperature - MinTemperature) / (MaxTemperature - MinTemperature) * 100));
+
+    private const double MinTemperature = -10; // Adjust based on your lowest expected temperature
+    private const double MaxTemperature = 40; // Adjust based on your highest expected temperature
+}
