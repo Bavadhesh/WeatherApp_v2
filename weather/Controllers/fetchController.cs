@@ -5,11 +5,14 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace weather.Controllers
 {
     [ApiController]
+    
     [Route("api/weather")]
+    
     public class fetchController : ControllerBase
     {
         private readonly IHttpClientFactory _clientFactory;
@@ -21,8 +24,10 @@ namespace weather.Controllers
         {
             _clientFactory = clientFactory ?? throw new ArgumentNullException(nameof(clientFactory));
         }
-
+         
+        
         [HttpGet]
+        
         public async Task<IActionResult> GetWeatherAsync(string query)
         {
             
