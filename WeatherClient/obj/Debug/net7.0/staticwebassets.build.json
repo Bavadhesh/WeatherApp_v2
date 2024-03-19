@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "SVMsmQi79HNxJ8lcaaEdR9ld6jkVazxXK8CDDMXGUAY=",
+  "Hash": "2NFDULDScc5oPiMQvTCZ7zvx9hy2+sOHS0eSd3mi9JY=",
   "Source": "WeatherClient",
   "BasePath": "/",
   "Mode": "Root",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Bavadhesh\\.nuget\\packages\\blazored.localstorage\\4.5.0\\lib\\net7.0\\Blazored.LocalStorage.dll"
+    },
+    {
+      "Identity": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Blazored.SessionStorage.dll",
+      "SourceId": "WeatherClient",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.SessionStorage.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Bavadhesh\\.nuget\\packages\\blazored.sessionstorage\\2.4.0\\lib\\net7.0\\Blazored.SessionStorage.dll"
     },
     {
       "Identity": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\dotnet.7.0.15.s17uf0uiuv.js",
@@ -202,6 +219,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Bavadhesh\\.nuget\\packages\\microsoft.aspnetcore.authorization\\7.0.15\\lib\\net7.0\\Microsoft.AspNetCore.Authorization.dll"
+    },
+    {
+      "Identity": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Authorization.dll",
+      "SourceId": "WeatherClient",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.Authorization.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Bavadhesh\\.nuget\\packages\\microsoft.aspnetcore.components.authorization\\6.0.0\\lib\\net6.0\\Microsoft.AspNetCore.Components.Authorization.dll"
     },
     {
       "Identity": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.dll",
@@ -542,6 +576,57 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Bavadhesh\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\lib\\net7.0\\Microsoft.Extensions.Primitives.dll"
+    },
+    {
+      "Identity": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.IdentityModel.JsonWebTokens.dll",
+      "SourceId": "WeatherClient",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.IdentityModel.JsonWebTokens.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Bavadhesh\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.5.0\\lib\\netstandard2.0\\Microsoft.IdentityModel.JsonWebTokens.dll"
+    },
+    {
+      "Identity": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.IdentityModel.Logging.dll",
+      "SourceId": "WeatherClient",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.IdentityModel.Logging.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Bavadhesh\\.nuget\\packages\\microsoft.identitymodel.logging\\6.5.0\\lib\\netstandard2.0\\Microsoft.IdentityModel.Logging.dll"
+    },
+    {
+      "Identity": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.IdentityModel.Tokens.dll",
+      "SourceId": "WeatherClient",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.IdentityModel.Tokens.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Bavadhesh\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.5.0\\lib\\netstandard2.0\\Microsoft.IdentityModel.Tokens.dll"
     },
     {
       "Identity": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.JSInterop.dll",
@@ -1341,6 +1426,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Bavadhesh\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\7.0.15\\runtimes\\browser-wasm\\lib\\net7.0\\System.Globalization.Extensions.dll"
+    },
+    {
+      "Identity": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.IdentityModel.Tokens.Jwt.dll",
+      "SourceId": "WeatherClient",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/System.IdentityModel.Tokens.Jwt.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Bavadhesh\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.5.0\\lib\\netstandard2.0\\System.IdentityModel.Tokens.Jwt.dll"
     },
     {
       "Identity": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.IO.Compression.Brotli.dll",
@@ -3655,6 +3757,23 @@
       "OriginalItemSpec": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Net.Quic.dll"
     },
     {
+      "Identity": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\obj\\Debug\\net7.0\\build-gz\\1NyumnxX.gz",
+      "SourceId": "WeatherClient",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.IdentityModel.Logging.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.IdentityModel.Logging.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.IdentityModel.Logging.dll"
+    },
+    {
       "Identity": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\obj\\Debug\\net7.0\\build-gz\\1WFFerfm.gz",
       "SourceId": "WeatherClient",
       "SourceType": "Computed",
@@ -4675,6 +4794,23 @@
       "OriginalItemSpec": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Resources.Writer.dll"
     },
     {
+      "Identity": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\obj\\Debug\\net7.0\\build-gz\\Fm1Srtw1.gz",
+      "SourceId": "WeatherClient",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/System.IdentityModel.Tokens.Jwt.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.IdentityModel.Tokens.Jwt.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.IdentityModel.Tokens.Jwt.dll"
+    },
+    {
       "Identity": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\obj\\Debug\\net7.0\\build-gz\\FM70qTSP.gz",
       "SourceId": "WeatherClient",
       "SourceType": "Computed",
@@ -5098,6 +5234,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\dotnet.7.0.15.s17uf0uiuv.js"
+    },
+    {
+      "Identity": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\obj\\Debug\\net7.0\\build-gz\\j5bmDs9W.gz",
+      "SourceId": "WeatherClient",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.IdentityModel.Tokens.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.IdentityModel.Tokens.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.IdentityModel.Tokens.dll"
     },
     {
       "Identity": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\obj\\Debug\\net7.0\\build-gz\\J6vI4R+U.gz",
@@ -5593,6 +5746,23 @@
       "OriginalItemSpec": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.dll"
     },
     {
+      "Identity": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\obj\\Debug\\net7.0\\build-gz\\oQ+q83df.gz",
+      "SourceId": "WeatherClient",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.Authorization.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Authorization.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Authorization.dll"
+    },
+    {
       "Identity": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\obj\\Debug\\net7.0\\build-gz\\p+drpbJT.gz",
       "SourceId": "WeatherClient",
       "SourceType": "Computed",
@@ -5795,6 +5965,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\icudt_no_CJK.dat"
+    },
+    {
+      "Identity": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\obj\\Debug\\net7.0\\build-gz\\reT+GdQs.gz",
+      "SourceId": "WeatherClient",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.SessionStorage.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Blazored.SessionStorage.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Blazored.SessionStorage.dll"
     },
     {
       "Identity": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\obj\\Debug\\net7.0\\build-gz\\rnN8eBJC.gz",
@@ -6016,6 +6203,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Collections.dll"
+    },
+    {
+      "Identity": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\obj\\Debug\\net7.0\\build-gz\\SPs1yXyQ.gz",
+      "SourceId": "WeatherClient",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.IdentityModel.JsonWebTokens.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.IdentityModel.JsonWebTokens.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.IdentityModel.JsonWebTokens.dll"
     },
     {
       "Identity": "C:\\Users\\Bavadhesh\\Desktop\\ASP\\WeatherClient\\obj\\Debug\\net7.0\\build-gz\\syig6DcL.gz",

@@ -53,3 +53,11 @@ C:\Users\Bavadhesh\Desktop\ASP\weather\bin\Debug\net7.0\runtimes\osx\native\libm
 C:\Users\Bavadhesh\Desktop\ASP\weather\bin\Debug\net7.0\runtimes\win\native\mongocrypt.dll
 C:\Users\Bavadhesh\Desktop\ASP\weather\bin\Debug\net7.0\Humanizer.dll
 C:\Users\Bavadhesh\Desktop\ASP\weather\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Bavadhesh\Desktop\ASP\weather\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Bavadhesh\Desktop\ASP\weather\bin\Debug\net7.0\microsoft.identitymodel.dll
+C:\Users\Bavadhesh\Desktop\ASP\weather\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Bavadhesh\Desktop\ASP\weather\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Bavadhesh\Desktop\ASP\weather\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Bavadhesh\Desktop\ASP\weather\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Bavadhesh\Desktop\ASP\weather\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Bavadhesh\Desktop\ASP\weather\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll

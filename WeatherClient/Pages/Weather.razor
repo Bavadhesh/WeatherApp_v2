@@ -2,11 +2,18 @@
 @inject HttpClient Http
 @using Newtonsoft.Json
 @inject IJSRuntime JSRuntime
-@inject Blazored.LocalStorage.ILocalStorageService localStorage;
+@inject Blazored.SessionStorage.ISessionStorageService _sessionStorage;
+@using System.Net.Http.Headers;
+@inject CustomAuthenticationStateProvider authService
+@inject NavigationManager Navigation
+
 
  <header class="header">
-        <h1 class="brand">Weather App</h1>
-    </header>
+    <h1 class="brand">Weather App</h1>
+</header>
+<div class="logout-container">
+    <button class="logout-button" @onclick="Logout">Logout</button>
+</div>
     <div class="search-container">
         <input type="text" class="search-input" placeholder="Enter location..." @bind="query">
         <button class="search-button" @onclick="JsonOut">Search</button>
@@ -82,6 +89,25 @@ body {
 .search-button:hover {
     background-color: #0056b3;
 }
+
+ .logout-container {
+        text-align: right; /* Align the button to the right */
+        padding: 10px; /* Add padding for spacing */
+    }
+
+    .logout-button {
+        background-color: transparent;
+        border: none;
+        color: #007bff;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 10px;
+    }
+
+    .logout-button:hover {
+        text-decoration: underline;
+    }
     </style>
 
 @code {
@@ -115,7 +141,14 @@ body {
         
         _client = new HttpClient();
 
+    var token = await _sessionStorage.GetItemAsync<string>("authToken");
+
+
     
+    if (!string.IsNullOrEmpty(token))
+    {
+        _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+    }
         
        
 
@@ -175,6 +208,13 @@ public class DailyData
 
 protected override async Task OnInitializedAsync()
     {
+        var IsAuthenticated = await _sessionStorage.ContainKeyAsync("authToken");
+
+            if (!IsAuthenticated)
+            {
+                // User is not logged in, navigate to "/"
+                Navigation.NavigateTo("/", true);
+            }
         
         var exists = await JSRuntime.InvokeAsync<string>("localStorage.getItem", "rs") != null;
 
@@ -192,6 +232,14 @@ protected override async Task OnInitializedAsync()
         query = rs[rs.Count-1];
         JsonOut();
         }
+    }
+
+    private async Task Logout()
+    {
+        // Perform logout logic here
+        // Example: Call logout method from authentication service
+        await authService.Logout();
+        Navigation.NavigateTo("/", true);
     }
 
 }

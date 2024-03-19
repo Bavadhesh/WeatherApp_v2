@@ -10,11 +10,14 @@ using Microsoft.AspNetCore.Authorization;
 namespace weather.Controllers
 {
     [ApiController]
-    
+    [Authorize]
     [Route("api/weather")]
     
     public class fetchController : ControllerBase
     {
+
+        
+        
         private readonly IHttpClientFactory _clientFactory;
         public string coord;
         List<Coordinates> Lat_long = null;

@@ -64,8 +64,8 @@
        
 
             
-            
-
+          
+      
         HttpResponseMessage response = await _client.GetAsync("http://localhost:5091/api/weather?query="+query);
         if(response.IsSuccessStatusCode){
             data = await response.Content.ReadAsStringAsync();

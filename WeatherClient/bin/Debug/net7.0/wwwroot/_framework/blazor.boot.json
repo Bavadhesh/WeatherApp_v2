@@ -8,8 +8,10 @@
   "resources": {
     "assembly": {
       "Blazored.LocalStorage.dll": "sha256-xcO4wZtFwM5I9DIZf1sZpOdcsaTjw1HyqJ5AWciMDAk=",
+      "Blazored.SessionStorage.dll": "sha256-zB1Pp8w\/ys0ZXs5YTb\/t+cNAnJQcBDXxTtF3gtgpXT8=",
       "Microsoft.AspNetCore.Authorization.dll": "sha256-qItsrcGUYsmf5k\/rs5T3s0\/5TooOLLkE7D3h\/jaADeA=",
       "Microsoft.AspNetCore.Components.dll": "sha256-ARTjidnVeShn7SWNQ9115es8+pJo2HuaJY7cqwaxyL8=",
+      "Microsoft.AspNetCore.Components.Authorization.dll": "sha256-xbEcMmsZVcvk5fX+1SeXPguS4wF3qoU0hqW3MlQa6O0=",
       "Microsoft.AspNetCore.Components.Forms.dll": "sha256-t6c5epX2ackuIi7LsWzLHHmrD9rxPsgqWnzWFbzR9pE=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-bNOL5azLh7fxx\/VGp45o6TTEfTj0wxIQlZL0Tt+LqmI=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-jNBqDMk+\/z2RZ8S\/nqRX3UQiqjeytKB9hEX6MLop3Jo=",
@@ -28,9 +30,13 @@
       "Microsoft.Extensions.Logging.Abstractions.dll": "sha256-7mzUlhcvGxpAVO4h\/Tka7P\/8IXF9ZsHkGt0fp5aufkU=",
       "Microsoft.Extensions.Options.dll": "sha256-gcHJrSv1wTqvF9SyWTEKcbiShn4mkgfnm9+tRQr4OqY=",
       "Microsoft.Extensions.Primitives.dll": "sha256-q4ruoDSCjV\/QJY9ZkzV6uxvEvZUVrDbyUjU3SSh5SlE=",
+      "Microsoft.IdentityModel.JsonWebTokens.dll": "sha256-1OQJotC1d6ZbYrEd7PYZf1V35fT9tLe3UOz8cI6BFJ8=",
+      "Microsoft.IdentityModel.Logging.dll": "sha256-WDaw\/tkbX2gnkZePKjsE1erzmYSsO6Ui8x\/0AVW+j34=",
+      "Microsoft.IdentityModel.Tokens.dll": "sha256-+gXpmuX8ZVV2Z8O8UKpoSXp3hp4\/2s9zp4nYNXR82HQ=",
       "Microsoft.JSInterop.dll": "sha256-AehwYy1LS3tq7tQBmAuu+XyUE138eX6q6T4yENKb42U=",
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-50v2DvQCeu51MYJTAhjabzGsiZf4JWgCE35fRkIHIv4=",
       "Newtonsoft.Json.dll": "sha256-IsZJ91\/OW+fHzNqIgEc7Y072ns8z9dGritiSyvR9Wgc=",
+      "System.IdentityModel.Tokens.Jwt.dll": "sha256-sKMVwTlxyI+5xTzUzpS5XFPbOl0rMbmuOwOecAhkwTw=",
       "System.IO.Pipelines.dll": "sha256-P\/MqD0fCBd5bgTM16JC1QC\/Zz7s+CwViyzmDFkBG4\/c=",
       "Microsoft.CSharp.dll": "sha256-a6OztVV\/ERaGFdMi7bvRQ6S+NoZUje1B1bHizd2g5JA=",
       "Microsoft.VisualBasic.Core.dll": "sha256-REkXTPfMocnfk5vCD\/43x\/DTzpO0uj7vNmdmUy7T9zU=",
@@ -200,13 +206,13 @@
       "mscorlib.dll": "sha256-fVDx40u1vKqhdy509hDF73SIx6C5q5Mst93LwfZWVQY=",
       "netstandard.dll": "sha256-ohOFXxRJKiyPbitdA1y5ebD9fSAGELDRVmhDM2nVdtA=",
       "System.Private.CoreLib.dll": "sha256-7Y6AhJbgMptcdman3NtSEbcJV520wGmyxB8QvZwrUmc=",
-      "WeatherClient.dll": "sha256-jPkbLPemEUseZ19aQ2tDK8GcSH7SOgt5vA\/eH6JqBCs="
+      "WeatherClient.dll": "sha256-zDYJo6aVx77BfpvsbiKemwReeOFolE6bYvNjD4+S3f8="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "WeatherClient.pdb": "sha256-NcZEzQdRPRugJoB7x8wU7WCDRRk0GzyVGgNAThbzamw="
+      "WeatherClient.pdb": "sha256-Vr14H7YLNRXF\/c9MaylhDjQaRtCHfteT\/csSVXAx7i0="
     },
     "runtime": {
       "dotnet.7.0.15.s17uf0uiuv.js": "sha256-MHuxwxeVFybuBBTAWeZrvoStZpW+H4ThSaRcFvrfqXM=",

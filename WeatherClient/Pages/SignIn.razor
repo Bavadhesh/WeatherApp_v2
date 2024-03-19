@@ -1,0 +1,115 @@
+@page "/"
+@inject CustomAuthenticationStateProvider authService
+@inject NavigationManager Navigation
+
+<h3 class="brand">Sign In - WeatherApp</h3>
+
+@if (!string.IsNullOrEmpty(ErrorMessage))
+{
+    <div class="error-message">@ErrorMessage</div>
+}
+
+<div class="form-container">
+    <form @onsubmit="HandleSubmit">
+        <div class="form-group">
+            <input type="email" class="form-input" @bind="Username" placeholder="Email" />
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-input" @bind="Password" placeholder="Password" />
+        </div>
+        <button type="submit" class="form-button">Sign In</button>
+    </form>
+</div>
+
+<style>
+    .brand {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 0;
+        text-align: center;
+        color: #007bff;
+    }
+
+    .form-container {
+        background-color: #fff;
+        border-radius: 25px;
+        padding: 40px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 20px auto;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-input {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        outline: none;
+    }
+
+    .form-button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 25px;
+        padding: 12px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .form-button:hover {
+        background-color: #0056b3;
+    }
+
+    .error-message {
+        background-color: #ff9999;
+        color: #cc0000;
+        border: 1px solid #cc0000;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 15px;
+        text-align: center;
+        display: none;
+    }
+</style>
+
+@code {
+    private string Username { get; set; }
+    private string Password { get; set; }
+    private string ErrorMessage { get; set; }
+
+    private async Task HandleSubmit()
+    {
+        
+        if (string.IsNullOrEmpty(Username) || string.IsNullOrEmpty(Password))
+        {
+            ErrorMessage = "Please enter both username and password.";
+            return;
+        }
+
+        
+        
+        var result = await authService.Login(Username, Password);
+
+        if (result != null && result.Success)
+        {
+            
+            Navigation.NavigateTo("/weather", true);
+        }
+        else
+        {
+            ErrorMessage = result?.ErrorMessage ?? "An error occurred during login.";
+            StateHasChanged();
+        }
+    }
+}
